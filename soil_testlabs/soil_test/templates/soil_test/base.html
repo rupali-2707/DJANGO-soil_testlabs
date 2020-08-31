@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <!-- <meta charset="utf-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Ek+Mukta:300,400,600|Open+Sans:400,800" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/lab.css' %}" type="text/css" media="all">
+      <link rel="stylesheet" href="{% static 'css/f.css' %}" type="text/css" media="all">
+    <title>soil_test_labs</title>
+    <link rel="stylesheet" href="nap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static "css/f.css"%}">
+    <style media="screen">
+      .btn-link{
+        font-weight: normal;}
+
+      .btn-link:hover{
+        font-weight: 500;
+      }
+
+      /* #hor-line{
+        width:1px;
+        background-color: black;
+      } */
+
+
+    </style>
+
+
+
+
+  </head>
+  <body>
+    {% if user.is_authenticated %}
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+          <h2 id="navhed"class="navbar-brand brand-name">
+            <br>
+            <a class="navbar-brand" href="#">
+              <!--  -->
+              <button  class="btn btn-link" style='font-size:17px;' onclick=""><img src="{% static "logomain.png"%}" width="160" ></button>
+
+            </a>
+         </h2>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <!-- onclick="window.location.href = 'https://w3docs.com';" -->
+            <div class="navbar-nav ml-auto">
+              <button class="btn btn-link" style='font-size:17px; text-decoration:none;color:black;' onclick="">Weather</button>
+              <button class="btn btn-link" style='font-size:17px;text-decoration:none;color:black;'  onclick="">About us</button>
+              <button class="btn btn-link" style='font-size:17px;text-decoration:none;color:black;' onclick="">Feedback</button>
+              <button class="btn btn-link" style='font-size:17px;text-decoration:none;color:black;' onclick="">Log Out</button>
+      </div>
+       <!-- Collapsible content -->
+
+     </div>
+
+
+     </div>
+
+        </nav>
+        <!-- navbar ends -->
+
+
+
+      {% block content %}
+
+      {% endblock %}
+      <footer class="footer">
+  <center>
+
+
+
+      <h2 style="color:white">Contact Us</h2>
+
+      <address>
+      <br>
+
+        <a class="btn bi" href="mailto:codebreakers.krishitech@gmail.com">Email Us</a>
+      </address>
+
+
+    </center>
+    <div class="legal">
+      <p>@Krishitech</p>
+
+      <div class="legal__links">
+        <span>Adding green to your life<span class="heart">♥</span></span>
+      </div>
+    </div>
+  </footer>
+{% endif %}
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/filterizr/1.3.4/jquery.filterizr.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+
+<script src="{% static "js/lab.js"%}" charset="utf-8"></script>
+
+  </body>
+</html>

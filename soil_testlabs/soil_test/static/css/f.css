@@ -1,0 +1,43 @@
+.footer {
+  background: linear-gradient(
+                                  45deg,
+                                  #000000,
+                                  #152331
+                                );
+ padding: 30px 30px 20px 30px;
+
+}
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: #999;
+}
+
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: #fc033d;
+}
+
+.bi{background:linear-gradient(45deg, #191654, #43C6AC);
+    padding: 8px 20px;
+    text-decoration:none;
+    color:white;
+     font-family: 'Cookie', cursive;
+    border-radius:5px;
+    cursor:pointer;}
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-top: 10px;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav {
+    flex: 2 0px;
+  }
+}

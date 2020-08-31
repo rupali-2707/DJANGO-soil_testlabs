@@ -1,0 +1,9 @@
+.dropdown-menu {
+  max-height: 200px;
+  overflow-y: auto;
+}
+body{
+  background-image: url("/static/sl.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,78 @@
+{% extends "soil_test/base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+  <div class="container">
+  <br>
+  <center>
+    <br><br>
+  <h2>Search for Laboratory here</h2><br>
+  <div class="btn-group dropright">
+
+
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Choose your State....
+  </button><br>
+  <div class="dropdown-menu">
+  <a class="dropdown-item" href="{% url 'soil_test:ap' %}">ANDHRAPRADESH</a>
+  <a class="dropdown-item" href="{% url 'soil_test:assam' %}">ASSAM</a>
+  <a class="dropdown-item" href="{% url 'soil_test:bihar' %}">BIHAR</a>
+  <a class="dropdown-item" href="{% url 'soil_test:chd' %}">CHANDIGARH</a>
+  <a class="dropdown-item" href="{% url 'soil_test:chtt' %}">CHHATTISGARH</a>
+  <a class="dropdown-item" href="{% url 'soil_test:delhi' %}">DELHI</a>
+  <a class="dropdown-item" href="{% url 'soil_test:goa' %}">GOA</a>
+  <a class="dropdown-item" href="{% url 'soil_test:gujarat' %}">GUJARAT</a>
+  <a class="dropdown-item" href="{% url 'soil_test:hry' %}">HARYANA</a>
+  <a class="dropdown-item" href="{% url 'soil_test:hp' %}">HIMACHAL PRADESH</a>
+  <a class="dropdown-item" href="{% url 'soil_test:jkd' %}">JHARKHAND</a>
+  <a class="dropdown-item" href="{% url 'soil_test:kar' %}">KARNATAKA</a>
+  <a class="dropdown-item" href="{% url 'soil_test:ker' %}">KERALA</a>
+  <a class="dropdown-item" href="{% url 'soil_test:mp' %}">MADHYA PRADESH</a>
+  <a class="dropdown-item" href="{% url 'soil_test:maharashtra' %}">MAHARASHTRA</a>
+  <a class="dropdown-item" href="{% url 'soil_test:meg' %}">MEGHALAYA</a>
+  <a class="dropdown-item" href="{% url 'soil_test:mizoram' %}">MIZORAM</a>
+  <a class="dropdown-item" href="{% url 'soil_test:odisha' %}">ODISHA</a>
+  <a class="dropdown-item" href="{% url 'soil_test:pun' %}">PUNJAB</a>
+  <a class="dropdown-item" href="{% url 'soil_test:rajasthan' %}">RAJASTHAN</a>
+  <a class="dropdown-item" href="{% url 'soil_test:sikkim' %}">SIKKIM</a>
+  <a class="dropdown-item" href="{% url 'soil_test:tamil' %}">TAMIL NADU</a>
+  <a class="dropdown-item" href="{% url 'soil_test:telangana' %}">TELANGANA</a>
+  <a class="dropdown-item" href="{% url 'soil_test:tripura' %}">TRIPURA</a>
+  <a class="dropdown-item" href="{% url 'soil_test:up' %}">UTTAR PRADESH</a>
+  <a class="dropdown-item" href="{% url 'soil_test:ukd' %}">UTTARAKHAND</a>
+  </div>
+</div>
+  <br><br>
+  <p>Get near by Laboratories here</p></center>
+
+  </div>
+  </div>
+<br><br><br><br>
+<div class="container">
+  <center><h3>{{header}}</h3></center>
+  <br>
+  {% for item in items %}
+
+  <div class="card-deck">
+    <div class="card  mb-3" style="width: 18rem;"><!-- card start 1-->
+      <div class="card-header">
+          <h5>{{item.Laboratory_name}}</h5>
+      </div>
+    <div class="card-body">
+      <p class="card-text"><b>Address: </b>{{item.address}}</p>
+        <p><b>Timing: </b>{{item.time}}</p>
+          <span><b>Review: </b>{{item.reviews}}
+            <span style="color:yellow;" class="fa fa-star"></span>
+          </span>
+          <p></p>
+          <p><b>Phone No: </b>{{item.phone_no}}</p>
+    </div>
+   </div> <!-- cards end1 -->
+  </div>
+  {% endfor %}
+
+</div>
+
+
+{% endblock %}
